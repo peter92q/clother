@@ -1,0 +1,2 @@
+export const button= "bg-black/90 rounded-md h-[40px] w-[110px] cursor-pointer rounded-sm text-white hover:opacity-80 font-medium uppercase"
+export const outlinedButton = "h-[40px] w-[90px] cursor pointer hover:opacity-80 bg-transparent border-[1px] rounded-md border-black text-black rounded-sm font-medium"

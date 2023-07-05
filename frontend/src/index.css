@@ -1,0 +1,176 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+@keyframes rise {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/*Product card effects*/
+.element {
+  transform: translateY(67%);
+  z-index: 1;
+}
+.parent:hover .element {
+  transform: translateY(0px);
+  transition: all 0.3s ease-in; 
+}
+/*END OF PRODUCT CARD EFFECTS*/
+
+/*Responsive grid layout for homepage catalogue*/
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+/*END OF REPONSIVE GRID LAYOUT*/
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/*shimmer effect for skelly*/
+.shimmer {
+  color: rgb(255, 255, 255);
+  display:block;
+  background: rgba(188, 186, 186, 0.514);
+  -webkit-mask:linear-gradient(-60deg,#504f4f 30%,rgba(148, 147, 147, 0.333),#807e7e 70%) right/500% 100%;
+  background-repeat: no-repeat;
+  animation: shimmer 2.5s infinite;
+  font-size: 50px;
+  max-width:400px;
+}
+
+@keyframes shimmer {
+  100% {-webkit-mask-position:left}
+}
+
+/*BURGER MENU ANIMATION*/
+.menuWrapper {
+  transition: transform 0.3s ease-in-out;
+}
+
+.menuHidden {
+  transform: translateY(-100%);
+}
+/*************/
+
+/*MARQUEE*/
+.logoMarqueeSection {
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+}
+
+#logoMarqueeSection {
+  max-width: 1920px!important;
+  margin: 0 auto;
+}
+
+.default-content-container {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+    width: 100%;
+    min-height: 100vh;
+}
+
+div.marquee>a>img {
+  height: 40px;
+}
+
+.logoMarqueeSection>div>div {
+    padding-top: 0;
+    padding-bottom: 0;
+    min-height: 0;
+}
+
+.marquee-wrapper {
+  display:  inline-block;
+  white-space: nowrap;
+}
+
+.marquee {
+    display:  inline-block;
+    white-space: nowrap;
+    position: relative;
+    transform: translate3d(0%, 0, 0);
+    animation-name: marquee;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.marquee a {
+    display:  inline-block;
+    white-space: nowrap;
+    padding-right: 5.4rem;
+}
+
+.marquee-wrapper:hover .marquee {
+    animation-play-state: paused !important;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translate3d(0%, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(-100%, 0, 0);
+    }
+}
+/*END OF MARQUEE*/
+
+/*INPUT FIELDS FOR LOGIN AND REGISTRATION*/
+
+.MuiOutlinedInput-root {
+  --border-color: black;
+}
+
+.MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
+  border-color: var(--border-color) !important;
+}
+
+.MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+  border-color: var(--border-color) !important;
+}
+
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: var(--border-color) !important;
+}
+
+.MuiInputLabel-outlined {
+  color: black;
+}
+
+.MuiInputLabel-outlined.MuiInputLabel-shrink {
+  color: black !important;
+}
+
+.MuiInputLabel-outlined.Mui-focused {
+  color: var(--border-color) !important;
+}

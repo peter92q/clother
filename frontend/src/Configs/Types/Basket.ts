@@ -1,0 +1,17 @@
+export interface BasketItem {
+        productId: number;
+        name: string;
+        price: number;
+        mainpic: string;
+        brand: string;
+        type: string;
+        quantity: number;
+        size: string;
+    }
+
+export interface Basket {
+        id: number;
+        buyerId: string;
+        items: BasketItem[];
+    }
+
